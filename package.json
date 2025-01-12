@@ -1,0 +1,22 @@
+{
+  "name": "cse341",
+  "version": "1.0.0",
+  "description": "My first project ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/VinoliaMoekwa/cse341project1.git"
+  },
+  "author": "Vinolia Moekwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VinoliaMoekwa/cse341project1/issues"
+  },
+  "homepage": "https://github.com/VinoliaMoekwa/cse341project1#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
