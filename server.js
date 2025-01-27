@@ -5,22 +5,18 @@ const routes = require('./routes');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // Ensure this line is present to parse JSON request bodies
 app.use('/', routes);
 
 const port = process.env.PORT || 3000;
 
-//app.use('/', require('./routes'));
-
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
-
 mongodb.initDb((err) => {
     if (err) {
-      console.log(err);
+        console.error('Failed to initialize database', err);
     } else {
-      app.listen(port, () => console.log(`Database is listening and running on port ${port}`));
+        console.log('Database initialized');
+        app.listen(port, () => {
+            console.log(`Server is running on port ${port}`);
+        });
     }
-  });
+});

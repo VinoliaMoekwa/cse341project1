@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My first project ",
   "main": "server.js",
+  "start": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +23,9 @@
     "express": "^4.21.2",
     "install": "^0.13.0",
     "mangodb": "^1.0.0",
+    "mongobd": "^0.0.1-security.0",
     "mongodb": "^6.12.0",
+    "swagger-ui-express": "^5.0.1",
     "xpress": "^2.4.6"
   }
 }
