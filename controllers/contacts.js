@@ -2,6 +2,7 @@ const { ObjectId } = require('mongodb');
 const mongodb = require('../data/database');
 
 const getAll = async (req, res) => {
+    //swagger.tags=['Contacts']
     console.log('contactsController.getAll called');
     const db = mongodb.getDatabase();
     const result = await db.collection('contacts').find();
@@ -11,6 +12,7 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+    //swagger.tags=['Contacts']
     console.log(`contactsController.getSingle called with id: ${req.params.id}`);
     const contactId = new ObjectId(req.params.id);
     const db = mongodb.getDatabase();
@@ -24,6 +26,7 @@ const getSingle = async (req, res) => {
 };
 
 const createContact = async (req, res) => {
+    //swagger.tags=['Contacts']
     const contact = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -47,6 +50,7 @@ const createContact = async (req, res) => {
 };
 
 const updateContact = async (req, res) => {
+    //swagger.tags=['Contacts']
     const contactId = new ObjectId(req.params.id);
     const updatedContact = {
         firstName: req.body.firstName,
@@ -72,6 +76,7 @@ const updateContact = async (req, res) => {
 };
 
 const deleteContact = async (req, res) => {
+    //swagger.tags=['Contacts']
     const contactId = new ObjectId(req.params.id);
 
     try {

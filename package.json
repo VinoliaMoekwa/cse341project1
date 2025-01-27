@@ -25,6 +25,7 @@
     "mangodb": "^1.0.0",
     "mongobd": "^0.0.1-security.0",
     "mongodb": "^6.12.0",
+    "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.1",
     "xpress": "^2.4.6"
   }

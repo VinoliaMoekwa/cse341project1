@@ -5,8 +5,19 @@ const routes = require('./routes');
 
 const app = express();
 
-app.use(bodyParser.json()); // Ensure this line is present to parse JSON request bodies
+app.use(bodyParser.json());
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origional','' );
+    res.setHeader(
+        'Acess-Control-Allow-Headers',
+        'Origional, X-Requested-With, Content-Type, Accept, Z-key'
+    );
+    res.setHeader('Acess-Control-Allow-Method', 'GET, POST, PUT, DELETE,OPTIONS' );
+    next();
+});
+
 app.use('/', routes);
+
 
 const port = process.env.PORT || 3000;
 
